@@ -9,7 +9,8 @@
     <link href="https://fonts.googleapis.com/css?family=Merriweather+Sans:400,700" rel="stylesheet" />
 </head>
 <body>
-    <section class="vh-100">
+  <style></style>
+    <section class="vh-150">
         <div class="container-fluid h-custom">
           <div class="row d-flex justify-content-center align-items-center h-100">
             <div class="col-md-9 col-lg-6 col-xl-5">
@@ -65,8 +66,8 @@
                 <div class="text-center text-lg-start mt-4 pt-2">
                   <button  type="button" data-mdb-button-init data-mdb-ripple-init class="btn btn-primary btn-lg"
                     style="padding-left: 2.5rem; padding-right: 2.5rem;">Login</button>
-                  <p class="small fw-bold mt-2 pt-1 mb-0">Don't have an account? <a href="#!"
-                      class="link-danger">Register</a></p>
+                  <p class="small fw-bold mt-2 pt-1 mb-0">Don't have an account? <a href="{{route('register')}}"
+                      class="link-primary">Register</a></p>
                 </div>
       
               </form>

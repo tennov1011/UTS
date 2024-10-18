@@ -31,8 +31,7 @@
             <div class="collapse navbar-collapse" id="navbarResponsive">
                 <ul class="navbar-nav ms-auto my-2 my-lg-0">
                     <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#services">Contact</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#portfolio">Register</a></li>
+                    <li class="nav-item"><a class="nav-link" href="https://wa.me/6282172714355/?text=Hello">Contact</a></li>
                     <li class="nav-item"><a class="nav-link" href="{{route('login')}}">Login</a></li>
                 </ul>
             </div>
@@ -272,7 +271,7 @@
      <div id="cookie-popup" class="container-fluid">
     <div class="d-flex justify-content-between align-items-center">
         <span>We use cookies to ensure you get the best experience on our website.</span>
-        <button id="accept-cookies" class="btn btn-primary">Accept</button>
+        <button id="accept-cookies" class="btn btn-primary">Accept Cookies</button>
     </div>
 </div>
 <!-- Cookie Pop-Up -->
