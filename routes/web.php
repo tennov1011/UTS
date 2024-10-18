@@ -8,7 +8,7 @@ use App\Http\Controllers\Auth\LoginController;
 use App\Http\Controllers\ProfileController;
 
 Route::get('/', function () {
-    return view('register');
+    return view('login');
 });
 
 Route::get('/login', [LoginController::class, 'showLoginForm'])->name('login');
