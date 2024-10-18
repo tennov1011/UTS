@@ -30,9 +30,9 @@
             <div class="collapse navbar-collapse" id="navbarResponsive">
                 <ul class="navbar-nav ms-auto my-2 my-lg-0">
                     <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#services">Services</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#portfolio">Portfolio</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#services">Contact</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#portfolio">Register</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#contact">Login</a></li>
                 </ul>
             </div>
         </div>
@@ -258,12 +258,16 @@
     <!-- SimpleLightbox plugin JS-->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/SimpleLightbox/2.1.0/simpleLightbox.min.js"></script>
     <!-- Core theme JS-->
-    <script src="js/scripts.js"></script>
+    <script src="{{ asset('js/scripts.js') }}"></script>
+
     <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *-->
     <!-- * *                               SB Forms JS                               * *-->
     <!-- * * Activate your form at https://startbootstrap.com/solution/contact-forms * *-->
     <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *-->
     <script src="https://cdn.startbootstrap.com/sb-forms-latest.js"></script>
+    <!-- <script src="script.js"></script> -->
+    
+
 </body>
 
 </html>
