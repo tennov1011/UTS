@@ -74,8 +74,8 @@
                 <div class="col-lg-3 col-md-6 text-center">
                     <div class="mt-5">
                         <div class="mb-2"><i class="bi-gem fs-1 text-primary"></i></div>
-                        <h3 class="h4 mb-2">Sturdy Themes</h3>
-                        <p class="text-muted mb-0">Our themes are updated regularly to keep them bug free!</p>
+                        <h3 class="h4 mb-2">Trusted Opportunities</h3>
+                        <p class="text-muted mb-0">Our career opportunities are regularly updated to ensure they offer the best fit and growth potential for you!</p>
                     </div>
                 </div>
                 <div class="col-lg-3 col-md-6 text-center">
