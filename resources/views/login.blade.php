@@ -18,7 +18,8 @@
                 class="img-fluid" alt="Sample image">
             </div>
             <div class="col-md-8 col-lg-6 col-xl-4 offset-xl-1">
-              <form>
+              <form method="POST" action="{{route('login')}}">
+                @csrf
                 <div class="d-flex flex-row align-items-center justify-content-center justify-content-lg-start">
                   <p class="lead fw-normal mb-0 me-3">Sign in with</p>
                   <button  type="button" data-mdb-button-init data-mdb-ripple-init class="btn btn-primary btn-floating mx-1">
@@ -42,14 +43,14 @@
                 <div data-mdb-input-init class="form-outline mb-4">
                   <input type="email" id="form3Example3" class="form-control form-control-lg"
                     placeholder="Enter a valid email address" />
-                  <label class="form-label" for="form3Example3">Email address</label>
+                  <label class="form-label" for="form3Example3" id="email" name="email">Email address</label>
                 </div>
       
                 <!-- Password input -->
                 <div data-mdb-input-init class="form-outline mb-3">
                   <input type="password" id="form3Example4" class="form-control form-control-lg"
                     placeholder="Enter password" />
-                  <label class="form-label" for="form3Example4">Password</label>
+                  <label class="form-label" for="form3Example4" id="password" name="password">Password</label>
                 </div>
       
                 <div class="d-flex justify-content-between align-items-center">

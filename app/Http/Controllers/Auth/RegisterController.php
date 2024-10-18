@@ -4,9 +4,10 @@ namespace App\Http\Controllers\Auth;
 
 use App\Http\Controllers\Controller;
 use App\Models\User;
+use Illuminate\Http\Request;
 use Illuminate\Foundation\Auth\RegistersUsers;
-use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Validator;
+
 
 class RegisterController extends Controller
 {
@@ -40,10 +41,6 @@ class RegisterController extends Controller
         $this->middleware('guest');
     }
 
-    public function showRegisterForm(){
-        return view('register');
-    }
-
     /**
      * Get a validator for an incoming registration request.
      *
@@ -65,14 +62,45 @@ class RegisterController extends Controller
      * @param  array  $data
      * @return \App\Models\User
      */
-    protected function create(array $data)
+    // protected function create(Request $data)
+    // {
+    //     return User::create([
+    //         'name' => $data['name'],
+    //         'email' => $data['email'],
+    //         'password' => Hash::make($data['password']),
+    //     ]);
+    // }
+
+    public function registerPost(Request $request)
     {
-        return User::create([
-            'name' => $data['name'],
-            'email' => $data['email'],
-            'password' => Hash::make($data['password']),
-        ]);
+        $request->validate(
+            [
+                'name' => 'required|email',
+                'email' => 'required|email|unique:users',
+                'password' => 'required',
+            ]);
+
+            $data['name'] = $request->name;
+            $data['email'] = $request->email;
+            $data['password'] = $request->password;
+            $user = User::create($data);
+        // $credentials = $request->only('email', 'password');
+        if (!$user) {
+            return redirect(route('register'))->withErrors("Registration Failed");
+        } else {
+            return redirect(route('login'))->with("succes", "Registration Success");
+        }
     }
 
+    // function logout()
+    // {
+    //     Session::flush();
+    //     Auth::logout()
+    //     return redirect(route('login'));
+    // }
+
+    public function showRegisterForm(){
+        return view('register');
+    }
 }
 

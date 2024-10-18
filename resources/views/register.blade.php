@@ -15,9 +15,9 @@
       <div class="col-12 col-lg-9 col-xl-7">
         <div class="card shadow-2-strong card-registration" style="border-radius: 15px;">
           <div class="card-body p-4 p-md-5">
-            <h3 class="mb-4 pb-2 pb-md-0 mb-md-5">Registration Form</h3>
-            <form>
-
+            <h3 class="mb-4 pb-2 pb-md-0 mb-md-5">Complete Your Registration </h3>
+            <form method="POST" action="{{route('register')}}">
+              @csrf
               <div class="row">
                 <div class="col-md-6 mb-4">
 
@@ -61,13 +61,6 @@
                       value="option2" />
                     <label class="form-check-label" for="maleGender">Male</label>
                   </div>
-
-                  <div class="form-check form-check-inline">
-                    <input class="form-check-input" type="radio" name="inlineRadioOptions" id="otherGender"
-                      value="option3" />
-                    <label class="form-check-label" for="otherGender">Other</label>
-                  </div>
-
                 </div>
               </div>
 
@@ -95,12 +88,13 @@
 
                   <select class="select form-control-lg">
                     <option value="1" disabled>Choose option</option>
-                    <option value="2">Subject 1</option>
-                    <option value="3">Subject 2</option>
-                    <option value="4">Subject 3</option>
+                    <option value="2">Student</option>
+                    <option value="3">Backend Developer</option>
+                    <option value="4">Data Analys</option>
+                    <option value="4">Programmer</option>
+                    <option value="4">Developer Operation</option>
                   </select>
-                  <label class="form-label select-label">Choose option</label>
-
+                  <label class="ml-2 form-label select-label">Choose one </label>
                 </div>
               </div>
 
