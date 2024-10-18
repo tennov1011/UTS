@@ -57,3 +57,24 @@ window.addEventListener('DOMContentLoaded', event => {
     });
 
 });
+
+
+// script.js
+const cookieBanner = document.querySelector('.cookie-banner');
+const acceptButton = document.querySelector('.accept-cookies');
+const manageButton = document.querySelector('.manage-cookies');
+
+// Fungsi untuk menyembunyikan banner cookie
+function hideCookieBanner() {
+  cookieBanner.style.display = 'none';
+  // Simpan preferensi pengguna di sini (misalnya, menggunakan localStorage)
+  localStorage.setItem('cookieConsent', 'accepted');
+}
+
+acceptButton.addEventListener('click', hideCookieBanner);
+
+// Fungsi untuk menampilkan pengaturan cookie (Anda bisa menambahkan logika di sini)
+manageButton.addEventListener('click', () => {
+  // Contoh: Alihkan ke halaman pengaturan cookie
+  window.location.href = 'pengaturan-cookie.html';
+});

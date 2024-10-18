@@ -18,10 +18,22 @@
     <link href="https://cdnjs.cloudflare.com/ajax/libs/SimpleLightbox/2.1.0/simpleLightbox.min.css" rel="stylesheet" />
     <!-- Core theme CSS (includes Bootstrap)-->
     <link rel="stylesheet" href="{{ asset('/css/landing.css') }}">
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const acceptButton = document.getElementById('accept-cookies');
+            const cookiePopup = document.getElementById('cookie-popup');
 
+            acceptButton.addEventListener('click', function() {
+                cookiePopup.classList.add('hidden');
+            });
+        });
+    </script>
 </head>
 
 <body id="page-top">
+
     <!-- Navigation-->
     <nav class="navbar navbar-expand-lg navbar-light fixed-top py-3" id="mainNav">
         <div class="container px-4 px-lg-5">
@@ -267,6 +279,19 @@
     <script src="https://cdn.startbootstrap.com/sb-forms-latest.js"></script>
     <!-- <script src="script.js"></script> -->
     
+     <!-- Cookie Popup -->
+     <div id="cookie-popup" class="fixed inset-0 flex items-center justify-center bg-gray-800 bg-opacity-50">
+        <div class="bg-white p-6 rounded-lg shadow-lg max-w-md text-center">
+            <p class="text-gray-700 mb-4">
+                We use cookies to enhance your browsing experience, analyze traffic, serve ads, and personalize content in accordance with our 
+                <a href="#" class="text-blue-600 underline">Privacy Policy</a>. Click 'Accept' to consent to our use of cookies or 'Manage' to change default cookie settings.
+            </p>
+            <div class="flex justify-between">
+                <button class="bg-gray-200 text-gray-700 px-4 py-2 rounded">MANAGE</button>
+                <button id="accept-cookies" class="bg-blue-600 text-white px-4 py-2 rounded">ACCEPT COOKIES</button>
+            </div>
+        </div>
+    </div>
 
 </body>
 
