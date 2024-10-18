@@ -42,11 +42,11 @@
         <div class="container px-4 px-lg-5 h-100">
             <div class="row gx-4 gx-lg-5 h-100 align-items-center justify-content-center text-center">
                 <div class="col-lg-8 align-self-end">
-                    <h1 class="text-white font-weight-bold">Your Favorite Place for Free Bootstrap Themes</h1>
+                    <h1 class="text-white font-weight-bold">Elevate Your Career, Achieve a Brighter Future!</h1>
                     <hr class="divider" />
                 </div>
                 <div class="col-lg-8 align-self-baseline">
-                    <p class="text-white-75 mb-5">Start Bootstrap can help you build better websites using the Bootstrap framework! Just download a theme and start customizing, no strings attached!</p>
+                    <p class="text-white-75 mb-5">Welcome to our career management website! We empower you to elevate your career with personalized guidance, valuable resources, and networking opportunities. Let’s unlock your potential and achieve a brighter future together!</p>
                     <a class="btn btn-primary btn-xl" href="#about">Find Out More</a>
                 </div>
             </div>
@@ -59,7 +59,7 @@
                 <div class="col-lg-8 text-center">
                     <h2 class="text-white mt-0">We've got what you need!</h2>
                     <hr class="divider divider-light" />
-                    <p class="text-white-75 mb-4">Start Bootstrap has everything you need to get your new website up and running in no time! Choose one of our open source, free to download, and easy to use themes! No strings attached!</p>
+                    <p class="text-white-75 mb-4">Join us and explore career opportunities that match your passion and skills. We offer a dynamic work environment, support for growth, and the chance to contribute to innovative projects.</p>
                     <a class="btn btn-light btn-xl" href="#services">Get Started!</a>
                 </div>
             </div>
@@ -74,8 +74,8 @@
                 <div class="col-lg-3 col-md-6 text-center">
                     <div class="mt-5">
                         <div class="mb-2"><i class="bi-gem fs-1 text-primary"></i></div>
-                        <h3 class="h4 mb-2">Sturdy Themes</h3>
-                        <p class="text-muted mb-0">Our themes are updated regularly to keep them bug free!</p>
+                        <h3 class="h4 mb-2">Trusted Opportunities</h3>
+                        <p class="text-muted mb-0">Our career opportunities are regularly updated to ensure they offer the best fit and growth potential for you!</p>
                     </div>
                 </div>
                 <div class="col-lg-3 col-md-6 text-center">
