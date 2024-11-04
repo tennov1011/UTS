@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Dashboard</title>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet" />
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&amp;display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="{{ asset('/css/dashboard.css') }}">
@@ -13,9 +13,14 @@
 
 <body>
     <div class="header">
-        <button class="logout-button" onclick="logout()">Log Out</button>
+        <!-- <a href="{{route('login')}}" class="logout-button">Log Out</a> -->
+        <form role="form" method="POST" action="{{ route('logout') }}">
+            @csrf
+        <button type="submit" class="logout-button">Logout</button>
+        </form>
+        <!-- <button class="logout-button" onclick="logout()">Log Out</button> -->
         <h1>
-            Pimpin
+            Tennov
         </h1>
         <div class="nav">
             <a href="#">
@@ -45,9 +50,9 @@
         <h2>
             Hi There!
             <br />
-            I am Pimpin
+            I am Tennov
             <br />
-            A Web Designer
+            A Web Developer
         </h2>
         <p>
         </p>
@@ -75,7 +80,7 @@
         </div>
     </div>
     <div class="content">
-        <img alt="Smiling man with arms crossed" height="400" src="https://storage.googleapis.com/a1aa/image/KHEDxNe4qEwwCqNyfR0JfwjZODeejlPbVhklPBaeAf6b3denTA.jpg" width="400" />
+        <img alt="Smiling man with arms crossed" height="400" src="./img/profilk.png" width="400" />
         <div class="tabs">
             <button class="active">
                 ABOUT ME

@@ -6,6 +6,7 @@ use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use Illuminate\Foundation\Auth\AuthenticatesUsers;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Session;
 
 class LoginController extends Controller
 {
@@ -40,7 +41,7 @@ class LoginController extends Controller
         $this->middleware('auth')->only('logout');
     }
 
-    public function loginPost(Request $request)
+    public function loginPost(Request $request) 
     {
         $request->validate(
             [
@@ -56,14 +57,24 @@ class LoginController extends Controller
 
         // $credentials = $request->only('email', 'password');
         if (Auth::attempt(['email' => $request->email, 'password' => $request->password])) {
-            return redirect()->intended('dashboard');
+            return redirect()->intended(url('login'));
         } else {
             return redirect()->back()->withErrors('Email or Password Invalid')->withInput();
         }
     }
 
+    public function logout() {
+        Session::flush();
+        Auth::logout();
+        return redirect('login');
+    }
+
     public function showLoginForm()
     {
         return view('login');
+    }
+
+    public function showDashboardForm() {
+        return view('home');
     }
 }

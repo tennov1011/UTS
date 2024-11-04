@@ -6,6 +6,7 @@ use App\Http\Controllers\Controller;
 use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Foundation\Auth\RegistersUsers;
+use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Validator;
 
 
@@ -75,14 +76,23 @@ class RegisterController extends Controller
     {
         $request->validate(
             [
-                'name' => 'required|email',
+                'firstName' => 'required',
+                'lastName' => 'required',
+                'birthdayDate' => 'required|date',
                 'email' => 'required|email|unique:users',
-                'password' => 'required',
+                'phoneNumber' => 'required',
+                'gender' => 'required',
+                'selectjob' => 'required',
+                'password' => 'required'
             ]);
 
-            $data['name'] = $request->name;
+            $data['first_name'] = $request->firstName;
+            $data['last_name'] = $request->lastName;
+            $data['gender'] = $request->gender;
             $data['email'] = $request->email;
-            $data['password'] = $request->password;
+            $data['birthday'] = $request->birthdayDate;
+            $data['phone'] = $request->phoneNumber;
+            $data['password'] = Hash::make($request->password);
             $user = User::create($data);
         // $credentials = $request->only('email', 'password');
         if (!$user) {
